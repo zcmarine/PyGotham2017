@@ -1,0 +1,15 @@
+---
+# To execute:
+#     pip install ansible
+#     export ANSIBLE_LIBRARY='.'
+#     ansible-playbook -v basic_playbook.yml
+#
+#  Optionally use --check to run the playbook in check mode
+#
+- name: A basic playbook
+  hosts: localhost
+  tasks:
+    - name: Test that my module works
+      basic_module:
+        name: "Hello-World"  # This will succeed
+        # name: "Oscar"  # This will fail
